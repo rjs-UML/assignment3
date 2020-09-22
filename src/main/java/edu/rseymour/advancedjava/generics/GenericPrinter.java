@@ -4,6 +4,9 @@ import java.lang.reflect.Method;
 
 /**
  * Class that prints Generic types.
+ *
+ * NOTE: This class does not have a corresponding JUnit test. It
+ * includes the main method tests provided in the instruction.
  */
 public class GenericPrinter {
 

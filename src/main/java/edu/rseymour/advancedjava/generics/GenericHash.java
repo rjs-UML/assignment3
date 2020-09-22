@@ -14,22 +14,10 @@ public class GenericHash<T, V> {
 
     private T type;
     private V value;
+    private HashMap<T, V> hashMap;
 
-    /**
-     * No-arg constructor.
-     */
     public GenericHash() {
-
-    }
-
-    /**
-     * Constructor that returns generic hashmap object.
-     * @param t the generic type of the hashmap.
-     * @param v the generic value associated with the generic type.
-     */
-    public GenericHash(T t, V v) {
-        this.type = t;
-        this.value = v;
+        hashMap = new HashMap<>();
     }
 
     /**
@@ -41,6 +29,7 @@ public class GenericHash<T, V> {
 
     /**
      * Sets the Type stored in the Generic Hashmap.
+     *
      * @param type the generic type to store.
      */
     public void setType(T type) {
@@ -56,15 +45,14 @@ public class GenericHash<T, V> {
 
     /**
      * Sets the Value associated with the generic type in the HashMap.
+     *
      * @param value
      */
     public void setValue(V value) {
         this.value = value;
     }
 
-    public static void main(String[] args) {
-
-        GenericHash<Integer, String> genericHash = new GenericHash<>();
-
+    public HashMap<T, V> getHashMap() {
+        return hashMap;
     }
 }
